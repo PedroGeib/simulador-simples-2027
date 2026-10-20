@@ -1,0 +1,35 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatores de correção de temperatura e agrupamento de circuitos (NBR 5410)</title><meta name="description" content="Entenda como corrigir a capacidade de corrente de um cabo pela temperatura ambiente e pelo agrupamento de circuitos, com exemplo de cálculo.">
+<link rel="canonical" href="https://pedrogeib.github.io/simulador-simples-2027/blog/fatores-correcao-temperatura-agrupamento.html"><meta property="og:title" content="Fatores de correção de temperatura e agrupamento de circuitos (NBR 5410)"><meta property="og:description" content="Entenda como corrigir a capacidade de corrente de um cabo pela temperatura ambiente e pelo agrupamento de circuitos, com exemplo de cálculo."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Fatores de correção de temperatura e agrupamento de circuitos (NBR 5410)", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "pt-BR", "mainEntityOfPage": "https://pedrogeib.github.io/simulador-simples-2027/blog/fatores-correcao-temperatura-agrupamento.html"}</script><style>:root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}header{background:var(--escuro);color:#fff;padding:28px 0}
+header a{color:#d6e2f2;text-decoration:none;font-size:14px;margin-right:14px}h1{font-size:32px;line-height:1.15;margin:16px 0 8px;letter-spacing:-.5px}
+.meta{color:#9fb0c8;font-size:14px}article{padding:28px 0}h2{font-size:24px;color:var(--azul);margin:26px 0 10px}
+p,li{font-size:17px;margin-bottom:12px}ul{padding-left:24px}a{color:var(--azul)}
+table{width:100%;border-collapse:collapse;margin:14px 0}td,th{padding:9px;border-bottom:1px solid #dfe5ee;text-align:left;font-size:16px}th{color:var(--cinza);font-size:14px}
+.cta{background:var(--azul);color:#fff;border-radius:16px;padding:24px;margin:30px 0}.cta h3{font-size:20px;margin-bottom:6px}
+.cta p{color:#d6e2f2;font-size:16px}.cta a{display:inline-block;margin:6px 10px 0 0;background:var(--ouro);color:var(--escuro);font-weight:800;text-decoration:none;padding:12px 18px;border-radius:10px;font-size:15px}
+.aviso{font-size:13px;color:var(--cinza);border-top:1px solid #dfe5ee;padding-top:14px;margin-top:20px}
+footer{background:var(--escuro);color:#9fb0c8;padding:22px 0;font-size:14px;text-align:center}
+@media(max-width:600px){h1{font-size:25px}}</style></head><body>
+<header><div class="wrap"><a href="../">Início</a><a href="./">Blog</a><a href="../fator-r/">Calc. Fator R</a><a href="../queda-de-tensao/">Calc. queda de tensão</a>
+<h1>Fatores de correção de temperatura e agrupamento de circuitos (NBR 5410)</h1><div class="meta">Publicado em 20/10/2026</div></div></header>
+<main class="wrap"><article>
+<p>A capacidade de corrente da tabela da NBR 5410 vale para condições de referência: temperatura ambiente de 30 °C e um único circuito. Fora delas, é preciso corrigir o valor.</p>
+<h2>Como corrigir</h2>
+<p><b>Capacidade corrigida (Iz) = capacidade da tabela × fator de temperatura × fator de agrupamento</b></p>
+<h2>Fatores usuais</h2>
+<table><tr><th>Temperatura ambiente (PVC)</th><th>Fator</th></tr><tr><td>30 °C</td><td>1,00</td></tr><tr><td>35 °C</td><td>0,94</td></tr><tr><td>40 °C</td><td>0,87</td></tr></table>
+<table><tr><th>Circuitos agrupados</th><th>Fator</th></tr><tr><td>1</td><td>1,00</td></tr><tr><td>2</td><td>0,80</td></tr><tr><td>3</td><td>0,70</td></tr><tr><td>4</td><td>0,65</td></tr><tr><td>5</td><td>0,60</td></tr><tr><td>6</td><td>0,57</td></tr></table>
+<p>Para outras temperaturas, outros números de circuitos e outros métodos de instalação, consulte as Tabelas 40 e 42 a 45 da NBR 5410. Os valores acima são os usuais divulgados em guias e devem ser conferidos na norma.</p>
+<h2>Exemplo</h2>
+<p>Um cabo de 4 mm² no método B1 com 2 condutores carregados suporta 32 A nas condições de referência. Em um ambiente a 35 °C, com 3 circuitos no mesmo eletroduto:</p>
+<p>Iz = 32 × 0,94 × 0,70 = <b>cerca de 21,1 A</b>.</p>
+<p>Ou seja, o cabo que suportaria um disjuntor de 25 A nas condições de referência passa a suportar apenas cerca de 21 A. Para um disjuntor de 25 A, seria preciso subir para 6 mm².</p>
+<h2>Onde isso entra no dimensionamento</h2>
+<p>Veja o passo a passo em <a href="dimensionar-cabo-e-disjuntor-nbr-5410.html">Como dimensionar cabo e disjuntor</a> e a tabela de base em <a href="tabela-capacidade-corrente-cabos-nbr-5410.html">capacidade de corrente dos cabos</a>. A <a href="../queda-de-tensao/">calculadora gratuita</a> já aplica esses fatores.</p>
+
+<div class="cta"><h3>Calcule o seu circuito agora</h3><p>Use a calculadora gratuita de queda de tensão e bitola de cabo ou a planilha com até 20 circuitos e quadro de cargas.</p><a href="../queda-de-tensao/" rel="noopener">Calculadora de queda de tensão (grátis)</a><a href="https://pay.kiwify.com.br/oGdkxUz" rel="noopener">Planilha Eletricista PRO – R$ 67</a></div>
+<p class="aviso">Conteúdo informativo sobre a ABNT NBR 5410. Os valores de tabelas citados vêm de fontes secundárias; confirme na norma vigente. Todo projeto elétrico deve ser validado por profissional habilitado e não dispensa ART.</p></article></main>
+<footer><div class="wrap">Simulador Simples Nacional 2027 e Planilha Eletricista PRO · <a href="./" style="color:#d6e2f2">Blog</a></div></footer></body></html>
