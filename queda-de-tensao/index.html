@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Queda de Tensão e Bitola de Cabo (NBR 5410) – Grátis</title>
+<meta name="description" content="Calculadora grátis de queda de tensão: informe potência, tensão e distância e veja a bitola do cabo, o disjuntor e a queda real em %, pela NBR 5410 (cobre, PVC 70 °C).">
+<link rel="canonical" href="https://pedrogeib.github.io/simulador-simples-2027/queda-de-tensao/">
+<meta property="og:title" content="Calculadora de Queda de Tensão e Bitola de Cabo (NBR 5410)">
+<meta property="og:description" content="Descubra a bitola do cabo e o disjuntor certos para o seu circuito.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pedrogeib.github.io/simulador-simples-2027/queda-de-tensao/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Qual a queda de tensão máxima permitida pela NBR 5410?","acceptedAnswer":{"@type":"Answer","text":"Nos circuitos terminais o limite é de 4%. O limite total, da origem da instalação até o ponto mais distante, varia de 5% a 7% conforme a origem da alimentação."}},
+{"@type":"Question","name":"Como calcular a queda de tensão de um cabo?","acceptedAnswer":{"@type":"Answer","text":"De forma simplificada: queda % = (k × ρ × comprimento × corrente) ÷ (seção × tensão) × 100, com k = 2 para circuitos monofásicos e √3 para trifásicos, e ρ a resistividade do cobre. Este cálculo despreza a reatância do cabo."}},
+{"@type":"Question","name":"Como escolher a bitola do cabo?","acceptedAnswer":{"@type":"Answer","text":"Escolhe-se o disjuntor (In ≥ corrente do circuito) e depois a menor seção cuja capacidade de condução, corrigida por temperatura e agrupamento, seja maior ou igual a In. Em seguida confere-se a queda de tensão e a seção mínima: 1,5 mm² para iluminação e 2,5 mm² para tomadas."}}]}
+</script>
+<style>
+:root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--verde:#1E8A4A;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.55}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header{background:var(--escuro);color:#fff;padding:44px 0 48px}
+.tag{display:inline-block;background:var(--ouro);color:var(--escuro);font-weight:800;font-size:13px;padding:6px 14px;border-radius:30px}
+h1{font-size:34px;line-height:1.1;margin:16px 0 12px;letter-spacing:-.5px}
+.lead{font-size:18px;color:#d6e2f2}
+section{padding:32px 0}
+h2{font-size:26px;color:var(--azul);margin-bottom:14px}
+h3{font-size:19px;color:var(--azul);margin:18px 0 6px}
+p{margin-bottom:12px;font-size:17px}
+.box{background:#fff;border:1px solid #e3e8f1;border-radius:16px;padding:24px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+label{display:block;font-weight:700;font-size:15px;margin:14px 0 4px;color:var(--azul)}
+small{color:var(--cinza);font-size:13px;display:block;margin-top:3px}
+input,select{width:100%;padding:12px;font-size:16px;border:2px solid #cdd6e3;border-radius:10px;background:#fff}
+input:focus,select:focus{outline:none;border-color:var(--azul)}
+button{margin-top:20px;width:100%;padding:16px;font-size:18px;font-weight:800;color:#fff;background:var(--azul);border:0;border-radius:12px;cursor:pointer}
+#res{margin-top:22px;display:none}
+.big{font-size:21px;font-weight:900;color:var(--azul);padding:16px;border-radius:12px;background:#e3f0e3;margin-bottom:14px}
+.big.v{background:#fdeaea;color:#a02020}
+table{width:100%;border-collapse:collapse;margin:10px 0 4px}
+td,th{padding:9px;border-bottom:1px solid #e8edf4;text-align:left;font-size:16px}
+th{color:var(--cinza);font-size:14px}
+.err{color:#a02020;font-weight:700;margin-top:14px;display:none}
+.cta{background:var(--azul);color:#fff;border-radius:18px;padding:26px;margin-top:22px}
+.cta h3{color:#fff;margin-top:0}
+.cta a.btn{display:inline-block;background:var(--ouro);color:var(--escuro);font-weight:900;text-decoration:none;padding:14px 26px;border-radius:12px;margin-top:8px}
+.cta p{font-size:16px;color:#d6e2f2}
+.cta .alt a{color:#fff}
+.aviso{font-size:13px;color:var(--cinza);margin-top:14px}
+footer{background:var(--escuro);color:#9fb0c8;padding:24px 0;font-size:14px;text-align:center;margin-top:20px}
+@media(max-width:600px){h1{font-size:27px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="tag">GRÁTIS • NBR 5410</span>
+<h1>Calculadora de Queda de Tensão e Bitola de Cabo</h1>
+<p class="lead">Informe potência, tensão e distância. Veja a bitola do cabo, o disjuntor e a queda de tensão real do circuito.</p>
+</div></header>
+
+<section><div class="wrap"><div class="box">
+<div class="grid">
+<div><label for="tipo">Tipo de circuito</label><select id="tipo"><option>TUE</option><option>TUG</option><option>Iluminação</option></select><small>Iluminação: mínimo 1,5 mm². Tomadas e TUE: mínimo 2,5 mm².</small></div>
+<div><label for="sis">Sistema</label><select id="sis"><option>Monofásico</option><option>Trifásico</option></select><small>Monofásico: fase e neutro ou duas fases.</small></div>
+<div><label for="ten">Tensão (V)</label><input id="ten" inputmode="decimal" value="220"></div>
+<div><label for="pot">Potência (W)</label><input id="pot" inputmode="decimal" value="5500"><small>Ex.: chuveiro de 5500 W.</small></div>
+<div><label for="fp">Fator de potência</label><input id="fp" inputmode="decimal" value="1"><small>Resistivo: 1. Motores: 0,8 a 0,9.</small></div>
+<div><label for="len">Comprimento do circuito (m)</label><input id="len" inputmode="decimal" value="15"><small>Distância do quadro até a carga.</small></div>
+<div><label for="met">Método de instalação</label><select id="met"><option value="B1">B1 – eletroduto embutido em alvenaria</option><option value="B2">B2 – eletroduto aparente/cabo multipolar</option><option value="C">C – cabo direto na parede/bandeja</option></select></div>
+<div><label for="grp">Circuitos agrupados</label><select id="grp"></select><small>Quantos circuitos passam juntos no mesmo eletroduto.</small></div>
+<div><label for="tmp">Temperatura ambiente (°C)</label><select id="tmp"></select></div>
+<div><label for="qm">Queda máxima (%)</label><input id="qm" inputmode="decimal" value="4"><small>NBR 5410: 4% nos circuitos terminais.</small></div>
+</div>
+<button id="go" type="button">Calcular</button>
+<div class="err" id="err"></div>
+<div id="res" aria-live="polite">
+<div class="big" id="titulo"></div>
+<table>
+<tr><td>Corrente de projeto (Ib)</td><td id="rIb"></td></tr>
+<tr><td>Disjuntor (In)</td><td id="rIn"></td></tr>
+<tr><td>Fatores de correção (temperatura × agrupamento)</td><td id="rFat"></td></tr>
+<tr><td>Cabo mínimo por capacidade</td><td id="rCap"></td></tr>
+<tr><td>Cabo mínimo por queda de tensão</td><td id="rQ"></td></tr>
+<tr><td>Seção mínima da norma</td><td id="rMin"></td></tr>
+<tr><td><b>Cabo final</b></td><td id="rSec"></td></tr>
+<tr><td>Queda de tensão real</td><td id="rQd"></td></tr>
+</table>
+<p id="detalhe"></p>
+<div class="cta">
+<h3>Tem vários circuitos? Calcule todos de uma vez.</h3>
+<p>A Planilha Eletricista PRO dimensiona até 20 circuitos, monta o quadro de cargas e sugere o disjuntor geral. R$ 67, pagamento único.</p>
+<a class="btn" href="https://pay.kiwify.com.br/oGdkxUz" rel="noopener">Quero a planilha completa</a>
+<p class="alt" style="margin-top:10px">Outras formas de compra: <a href="https://pay.hotmart.com/B108120095O" rel="noopener">Hotmart</a> · <a href="https://chk.eduzz.com/40QR7YXJ9B" rel="noopener">Eduzz</a> · <a href="../eletricista/">Ver detalhes</a></p>
+</div>
+</div>
+<p class="aviso">Ferramenta de apoio, para cobre com isolação PVC 70 °C. A queda de tensão é simplificada e desconsidera a reatância do cabo. As tabelas de capacidade de corrente foram transcritas de fonte secundária da NBR 5410; confirme na norma. Todo projeto elétrico deve ser validado por profissional habilitado e não dispensa ART.</p>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Como calcular a queda de tensão e a bitola do cabo</h2>
+<h3>1. Corrente do circuito</h3>
+<p>Monofásico: corrente = potência ÷ (tensão × fator de potência). Trifásico: corrente = potência ÷ (√3 × tensão × fator de potência).</p>
+<h3>2. Disjuntor e capacidade do cabo</h3>
+<p>Escolhe-se o disjuntor padrão igual ou acima da corrente. Depois, a menor seção cuja capacidade de condução, corrigida pela temperatura e pelo agrupamento de circuitos, seja igual ou maior que a corrente do disjuntor.</p>
+<h3>3. Queda de tensão</h3>
+<p>Queda (%) = k × ρ × comprimento × corrente ÷ (seção × tensão) × 100, com k = 2 para monofásico e √3 para trifásico. Nos circuitos terminais o limite da NBR 5410 é 4%. Se a queda passar do limite, aumenta-se a seção do cabo.</p>
+<h3>4. Seção mínima</h3>
+<p>Iluminação: 1,5 mm². Tomadas e circuitos de uso específico: 2,5 mm². A seção final é a maior entre capacidade, queda de tensão e mínima.</p>
+<h3>Perguntas frequentes</h3>
+<p><b>Chuveiro de 5500 W em 220 V, que cabo usar?</b> A corrente é 25 A, com disjuntor de 25 A. Em 15 m, embutido em eletroduto, o resultado é cabo de 4 mm² com queda de cerca de 1,9%.</p>
+<p><b>A calculadora serve para projeto?</b> Serve como apoio. O projeto precisa ser validado por profissional habilitado.</p>
+</div></section>
+
+<footer><div class="wrap">Calculadora gratuita de queda de tensão · Ferramenta de apoio. Não substitui projeto nem ART.</div></footer>
+
+<script src="calc.js"></script>
+<script>
+(function(){
+  var g=[1,2,3,4,5,6,7,8,9,12,16,20], t=[10,15,20,25,30,35,40,45,50,55,60];
+  var sg=document.getElementById('grp'), st=document.getElementById('tmp');
+  g.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sg.appendChild(o)});
+  t.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v+' °C';if(v===30)o.selected=true;st.appendChild(o)});
+  var $=function(i){return document.getElementById(i)};
+  var n=function(i){return parseFloat($(i).value.replace(',','.'))};
+  var f1=function(x){return x.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})};
+  var f2=function(x){return x.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})};
+  $('go').addEventListener('click',function(){
+    var r=window.calcCircuito({sistema:$('sis').value,tipo:$('tipo').value,tensao:n('ten'),potencia:n('pot'),fp:n('fp'),comprimento:n('len'),metodo:$('met').value,grupo:parseInt($('grp').value,10),temp:parseInt($('tmp').value,10),quedaMax:n('qm')});
+    if(r.erro){$('err').textContent=r.erro;$('err').style.display='block';$('res').style.display='none';return}
+    $('err').style.display='none';$('res').style.display='block';
+    var t=$('titulo');
+    t.textContent='Cabo de '+f1(r.secao)+' mm² e disjuntor de '+r.disjuntor+' A';
+    t.className='big'+(r.ok?'':' v');
+    $('rIb').textContent=f2(r.ib)+' A';
+    $('rIn').textContent=r.disjuntor+' A';
+    $('rFat').textContent=f2(r.fT)+' × '+f2(r.fG)+' (Iz mínima '+f1(r.izMin)+' A)';
+    $('rCap').textContent=f1(r.secCap)+' mm²';
+    $('rQ').textContent=f1(r.secQueda)+' mm²';
+    $('rMin').textContent=f1(r.secMin)+' mm²';
+    $('rSec').textContent=f1(r.secao)+' mm² (definido por '+r.motivo+')';
+    $('rQd').textContent=f2(r.queda)+'% '+(r.ok?'(dentro do limite)':'(ACIMA do limite)');
+    $('detalhe').textContent=r.ok?'Resultado dentro dos limites informados. Confirme com um profissional habilitado antes de executar.':'A queda de tensão passou do limite. Aumente a seção do cabo ou reduza a distância.';
+  });
+})();
+</script>
+</body>
+</html>
