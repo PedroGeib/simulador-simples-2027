@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pedrogeib.github.io/simulador-simples-2027/sitemap.xml
