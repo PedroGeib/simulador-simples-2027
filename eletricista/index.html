@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planilha Eletricista PRO – Cabos, Disjuntores e Quadro de Cargas</title>
+<meta name="description" content="Planilha que dimensiona cabo, disjuntor e queda de tensão pela NBR 5410 e monta o quadro de cargas. Até 20 circuitos.">
+<style>
+  :root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--verde:#1E8A4A;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  header{background:var(--escuro);color:#fff;padding:56px 0 64px}
+  .tag{display:inline-block;background:var(--ouro);color:var(--escuro);font-weight:800;font-size:14px;padding:6px 14px;border-radius:30px;letter-spacing:.4px}
+  h1{font-size:40px;line-height:1.1;margin:18px 0 16px;letter-spacing:-.5px}
+  h1 span{color:var(--ouro)}
+  .lead{font-size:19px;color:#d6e2f2;max-width:680px}
+  .capa{display:block;width:100%;max-width:520px;margin:32px auto 0;border-radius:18px;box-shadow:0 24px 50px rgba(0,0,0,.35)}
+  section{padding:48px 0}
+  h2{font-size:28px;color:var(--azul);margin-bottom:16px;letter-spacing:-.3px}
+  p{margin-bottom:14px;font-size:17px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  .card{background:#fff;border-radius:14px;padding:22px;border:1px solid #e3e8f1}
+  .card b{display:block;font-size:18px;color:var(--azul);margin-bottom:6px}
+  .card small{color:var(--cinza);font-size:15px}
+  .oferta{background:#fff;border:2px solid var(--verde);border-radius:20px;padding:34px;text-align:center;margin-top:12px}
+  .preco{font-size:56px;font-weight:900;color:var(--verde);line-height:1}
+  .preco-old{color:var(--cinza);font-size:17px;margin-top:6px}
+  .btn{display:inline-block;background:var(--verde);color:#fff;font-weight:800;font-size:20px;text-decoration:none;padding:18px 36px;border-radius:12px;margin-top:22px}
+  .btn[aria-disabled="true"]{background:#9aa7b8;cursor:not-allowed}
+  .aviso{font-size:14px;color:var(--cinza);margin-top:14px}
+  ul.checks{list-style:none;margin:16px 0 0}
+  ul.checks li{padding:8px 0 8px 30px;position:relative;font-size:17px}
+  ul.checks li::before{content:"✔";position:absolute;left:0;color:var(--verde);font-weight:900}
+  .faq details{background:#fff;border:1px solid #e3e8f1;border-radius:12px;padding:16px 20px;margin-top:10px}
+  .faq summary{font-weight:700;cursor:pointer;color:var(--azul)}
+  .faq details p{margin:10px 0 0;color:var(--cinza);font-size:16px}
+  footer{background:var(--escuro);color:#9fb0c8;padding:28px 0;font-size:14px;text-align:center}
+  @media (max-width:640px){h1{font-size:30px}.grid{grid-template-columns:1fr}.preco{font-size:46px}section{padding:36px 0}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><span class="tag">PARA ELETRICISTAS • NBR 5410</span>
+<h1>Cabo e disjuntor certos <span>em segundos</span></h1>
+<p class="lead">Informe potência, tensão e distância. A planilha calcula a corrente, escolhe o disjuntor, dimensiona o cabo por capacidade e queda de tensão e avisa quando algo está fora do limite.</p>
+<img class="capa" src="capa.png" alt="Planilha Eletricista PRO"></div></header>
+<section><div class="wrap"><h2>O que a planilha faz</h2><div class="grid">
+<div class="card"><b>Disjuntor e cabo</b><small>Escolhe o disjuntor (Ib ≤ In ≤ Iz) e o menor cabo que atende capacidade, queda e seção mínima.</small></div>
+<div class="card"><b>Queda de tensão</b><small>Mostra a queda real em % e avisa se passa do limite (4% nos circuitos terminais).</small></div>
+<div class="card"><b>Fatores de correção</b><small>Considera temperatura ambiente e agrupamento de circuitos, nos métodos B1, B2 e C.</small></div>
+<div class="card"><b>Quadro de cargas</b><small>Soma por tipo, corrente de demanda e disjuntor geral sugerido.</small></div></div>
+<ul class="checks"><li>Até 20 circuitos, monofásicos ou trifásicos</li><li>Funciona no Excel e no Google Planilhas, sem macros</li><li>Cobre, isolação PVC 70 °C, tabelas da NBR 5410 dentro da planilha</li><li>Exemplos prontos para apagar e usar</li></ul></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="oferta"><div class="preco">R$ 67</div><div class="preco-old">pagamento único · sem mensalidade</div>
+<a class="btn" href="#" aria-disabled="true">Quero a planilha</a><p class="aviso" style="margin-top:18px">Links de compra em breve.</p><p class="aviso">Pagamento único. Garantia de 7 dias.</p></div></div></section>
+<section style="padding-top:0" class="faq"><div class="wrap"><h2>Perguntas frequentes</h2>
+<details><summary>Substitui o projeto elétrico?</summary><p>Não. É uma ferramenta de apoio. Todo projeto deve ser validado por profissional habilitado e seguir a NBR 5410 vigente.</p></details>
+<details><summary>A queda de tensão considera a reatância?</summary><p>Não. O cálculo é simplificado (resistência do cobre). Em cabos grandes ou circuitos longos, confirme com o método completo.</p></details>
+<details><summary>De onde vêm as tabelas?</summary><p>Capacidade de condução da Tabela 36 da NBR 5410 (reprodução de guia de fabricante) e fatores usuais das tabelas 40 e 42. Confira na norma antes de usar em projeto.</p></details>
+<details><summary>Preciso saber Excel?</summary><p>Não. Você preenche células amarelas e o resultado aparece sozinho.</p></details></div></section>
+<footer><div class="wrap">Planilha Eletricista PRO · Ferramenta de apoio. Não substitui projeto nem ART.</div></footer></body></html>
