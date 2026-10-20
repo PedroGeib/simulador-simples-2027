@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador Simples Nacional 2027 – Fator R, DAS e Simples Híbrido</title>
+<meta name="description" content="Planilha que calcula o Fator R, compara Anexo III x V, mostra o DAS do mês e simula se o Simples Híbrido (IBS/CBS) de 2027 compensa para sua empresa.">
+<style>
+  :root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--verde:#1E8A4A;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.55}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  header{background:var(--escuro);color:#fff;padding:56px 0 64px}
+  .tag{display:inline-block;background:var(--ouro);color:var(--escuro);font-weight:800;font-size:14px;padding:6px 14px;border-radius:30px;letter-spacing:.4px}
+  h1{font-size:40px;line-height:1.1;margin:18px 0 16px;letter-spacing:-.5px}
+  h1 span{color:var(--ouro)}
+  .lead{font-size:19px;color:#d6e2f2;max-width:680px}
+  .capa{display:block;width:100%;max-width:520px;margin:32px auto 0;border-radius:18px;box-shadow:0 24px 50px rgba(0,0,0,.35)}
+  section{padding:48px 0}
+  h2{font-size:28px;color:var(--azul);margin-bottom:16px;letter-spacing:-.3px}
+  p{margin-bottom:14px;font-size:17px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  .card{background:#fff;border-radius:14px;padding:22px;border:1px solid #e3e8f1}
+  .card b{display:block;font-size:18px;color:var(--azul);margin-bottom:6px}
+  .card small{color:var(--cinza);font-size:15px}
+  .oferta{background:#fff;border:2px solid var(--verde);border-radius:20px;padding:34px;text-align:center;margin-top:12px}
+  .preco{font-size:56px;font-weight:900;color:var(--verde);line-height:1}
+  .preco-old{color:var(--cinza);font-size:17px;margin-top:6px}
+  .btn{display:inline-block;background:var(--verde);color:#fff;font-weight:800;font-size:20px;text-decoration:none;padding:18px 36px;border-radius:12px;margin-top:22px}
+  .btn[aria-disabled="true"]{background:#9aa7b8;cursor:not-allowed}
+  .aviso{font-size:14px;color:var(--cinza);margin-top:14px}
+  ul.checks{list-style:none;margin:16px 0 0}
+  ul.checks li{padding:8px 0 8px 30px;position:relative;font-size:17px}
+  ul.checks li::before{content:"✔";position:absolute;left:0;color:var(--verde);font-weight:900}
+  .faq details{background:#fff;border:1px solid #e3e8f1;border-radius:12px;padding:16px 20px;margin-top:10px}
+  .faq summary{font-weight:700;cursor:pointer;color:var(--azul)}
+  .faq details p{margin:10px 0 0;color:var(--cinza);font-size:16px}
+  footer{background:var(--escuro);color:#9fb0c8;padding:28px 0;font-size:14px;text-align:center}
+  @media (max-width:640px){h1{font-size:30px}.grid{grid-template-columns:1fr}.preco{font-size:46px}section{padding:36px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="tag">REFORMA TRIBUTÁRIA 2027</span>
+    <h1>Sua empresa está pagando <span>imposto demais</span> no Simples Nacional?</h1>
+    <p class="lead">Descubra em 2 minutos se você está no Anexo certo, quanto paga de DAS e se o Simples Híbrido (IBS/CBS) de 2027 compensa para o seu negócio.</p>
+    <img class="capa" src="capa.png" alt="Simulador Simples Nacional 2027: Fator R, DAS e Simples Híbrido">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>O que a planilha faz por você</h2>
+    <div class="grid">
+      <div class="card"><b>Fator R automático</b><small>Mostra se você está no Anexo III ou V e quanto paga em cada um.</small></div>
+      <div class="card"><b>Quanto aumentar o pró-labore</b><small>Calcula o valor exato por mês e o ganho líquido, já descontando o INSS de 11%.</small></div>
+      <div class="card"><b>DAS do mês com repartição</b><small>Imposto do mês e a parte de IRPJ, CSLL, Cofins, PIS, CPP e ISS.</small></div>
+      <div class="card"><b>Simples Híbrido 2027</b><small>Compara CBS/IBS dentro ou por fora do DAS e mostra o crédito que seus clientes ganham.</small></div>
+    </div>
+    <ul class="checks">
+      <li>Funciona no Excel e no Google Planilhas, sem macros e sem instalação</li>
+      <li>Tabelas oficiais da LC 123/2006 e regras da LC 214/2025</li>
+      <li>Cronograma da Reforma Tributária de 2026 a 2033 com todas as datas</li>
+      <li>Atualização gratuita quando o Senado fixar a alíquota oficial da CBS</li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Quem deve usar</h2>
+    <p>Donos de empresas de serviços no Simples (consultoria, TI, engenharia, saúde, publicidade, arquitetura), contadores e escritórios que querem simular rápido para os clientes.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="oferta">
+      <div class="preco">R$ 47</div>
+      <div class="preco-old">pagamento único · sem mensalidade</div>
+      <a class="btn" href="#" aria-disabled="true">Quero o simulador</a>
+      <p class="aviso">Link de compra disponível em breve. Garantia de 7 dias.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" class="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Preciso saber Excel?</summary><p>Não. Você preenche 5 números em células amarelas e o resultado aparece sozinho.</p></details>
+    <details><summary>A planilha substitui meu contador?</summary><p>Não. É uma ferramenta de apoio para entender a situação antes de conversar com seu contador.</p></details>
+    <details><summary>Os cálculos estão corretos?</summary><p>As tabelas vêm do texto oficial da LC 123/2006 e as regras de 2027 vêm da LC 214/2025. As fontes estão dentro da planilha.</p></details>
+    <details><summary>E se a alíquota da CBS mudar?</summary><p>O campo fica editável e você recebe a versão atualizada gratuitamente quando o Senado publicar o valor oficial.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Simulador Simples Nacional 2027 · Ferramenta de apoio à decisão. Não substitui a orientação de um contador.</div>
+</footer>
+
+</body>
+</html>
