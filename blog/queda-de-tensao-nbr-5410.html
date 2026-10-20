@@ -1,0 +1,36 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queda de tensão pela NBR 5410: limites e como calcular</title><meta name="description" content="Quais são os limites de queda de tensão da NBR 5410, a fórmula simplificada para circuitos monofásicos e trifásicos e um exemplo de cálculo.">
+<link rel="canonical" href="https://pedrogeib.github.io/simulador-simples-2027/blog/queda-de-tensao-nbr-5410.html"><meta property="og:title" content="Queda de tensão pela NBR 5410: limites e como calcular"><meta property="og:description" content="Quais são os limites de queda de tensão da NBR 5410, a fórmula simplificada para circuitos monofásicos e trifásicos e um exemplo de cálculo."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Queda de tensão pela NBR 5410: limites e como calcular", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "pt-BR", "mainEntityOfPage": "https://pedrogeib.github.io/simulador-simples-2027/blog/queda-de-tensao-nbr-5410.html"}</script><style>:root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}header{background:var(--escuro);color:#fff;padding:28px 0}
+header a{color:#d6e2f2;text-decoration:none;font-size:14px;margin-right:14px}h1{font-size:32px;line-height:1.15;margin:16px 0 8px;letter-spacing:-.5px}
+.meta{color:#9fb0c8;font-size:14px}article{padding:28px 0}h2{font-size:24px;color:var(--azul);margin:26px 0 10px}
+p,li{font-size:17px;margin-bottom:12px}ul{padding-left:24px}a{color:var(--azul)}
+table{width:100%;border-collapse:collapse;margin:14px 0}td,th{padding:9px;border-bottom:1px solid #dfe5ee;text-align:left;font-size:16px}th{color:var(--cinza);font-size:14px}
+.cta{background:var(--azul);color:#fff;border-radius:16px;padding:24px;margin:30px 0}.cta h3{font-size:20px;margin-bottom:6px}
+.cta p{color:#d6e2f2;font-size:16px}.cta a{display:inline-block;margin:6px 10px 0 0;background:var(--ouro);color:var(--escuro);font-weight:800;text-decoration:none;padding:12px 18px;border-radius:10px;font-size:15px}
+.aviso{font-size:13px;color:var(--cinza);border-top:1px solid #dfe5ee;padding-top:14px;margin-top:20px}
+footer{background:var(--escuro);color:#9fb0c8;padding:22px 0;font-size:14px;text-align:center}
+@media(max-width:600px){h1{font-size:25px}}</style></head><body>
+<header><div class="wrap"><a href="../">Início</a><a href="./">Blog</a><a href="../fator-r/">Calc. Fator R</a><a href="../queda-de-tensao/">Calc. queda de tensão</a>
+<h1>Queda de tensão pela NBR 5410: limites e como calcular</h1><div class="meta">Publicado em 20/10/2026</div></div></header>
+<main class="wrap"><article>
+<p>Queda de tensão é a diferença entre a tensão no quadro e a tensão na carga, causada pela resistência dos cabos. Se ela for grande, equipamentos podem funcionar mal ou esquentar.</p>
+<h2>Limites da NBR 5410</h2>
+<ul><li><b>Circuitos terminais:</b> até 4%.</li><li><b>Total da instalação:</b> de 5% a 7%, conforme a origem da alimentação (até 7% para transformador próprio ou gerador).</li></ul>
+<h2>Fórmula simplificada</h2>
+<p><b>Queda (%) = k × ρ × L × I ÷ (S × V) × 100</b></p>
+<ul><li>k = 2 em circuitos monofásicos e √3 em circuitos trifásicos;</li><li>ρ = resistividade do cobre (valores de 0,0172 a 0,0225 Ω·mm²/m, conforme a temperatura do condutor; o valor maior é mais conservador);</li><li>L = comprimento do circuito em metros;</li><li>I = corrente em ampères;</li><li>S = seção do cabo em mm²;</li><li>V = tensão em volts.</li></ul>
+<p>Essa fórmula despreza a reatância do cabo. Para cabos de seção grande ou circuitos longos, o método completo com impedância é mais preciso.</p>
+<h2>Exemplo</h2>
+<p>Tomadas de 1500 W em 127 V, fator de potência 1, 150 metros de distância, cabo em temperatura ambiente de 40 °C. A corrente é de cerca de 11,8 A e o disjuntor é de 16 A. A capacidade corrigida pede 2,5 mm², mas a queda de tensão com esse cabo passaria muito de 4%. Para ficar dentro do limite é preciso um cabo de <b>16 mm²</b>, com queda de cerca de 3,9%.</p>
+<p>Esse exemplo mostra que, em circuitos longos, a queda de tensão costuma ser o que define a bitola, e não a capacidade de corrente.</p>
+<h2>Como reduzir a queda de tensão</h2>
+<ul><li>Aumentar a seção do cabo.</li><li>Reduzir o comprimento do circuito.</li><li>Dividir a carga em mais circuitos.</li><li>Usar tensão mais alta (220 V em vez de 127 V) quando possível.</li></ul>
+<h2>Calcule o seu circuito</h2>
+<p>Use a <a href="../queda-de-tensao/">calculadora gratuita de queda de tensão</a> e veja o passo a passo em <a href="dimensionar-cabo-e-disjuntor-nbr-5410.html">Como dimensionar cabo e disjuntor</a>.</p>
+
+<div class="cta"><h3>Calcule o seu circuito agora</h3><p>Use a calculadora gratuita de queda de tensão e bitola de cabo ou a planilha com até 20 circuitos e quadro de cargas.</p><a href="../queda-de-tensao/" rel="noopener">Calculadora de queda de tensão (grátis)</a><a href="https://pay.kiwify.com.br/oGdkxUz" rel="noopener">Planilha Eletricista PRO – R$ 67</a></div>
+<p class="aviso">Conteúdo informativo sobre a ABNT NBR 5410. Os valores de tabelas citados vêm de fontes secundárias; confirme na norma vigente. Todo projeto elétrico deve ser validado por profissional habilitado e não dispensa ART.</p></article></main>
+<footer><div class="wrap">Simulador Simples Nacional 2027 e Planilha Eletricista PRO · <a href="./" style="color:#d6e2f2">Blog</a></div></footer></body></html>

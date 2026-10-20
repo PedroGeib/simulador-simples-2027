@@ -1,0 +1,38 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como dimensionar cabo e disjuntor pela NBR 5410: passo a passo com exemplo</title><meta name="description" content="Passo a passo para dimensionar cabo e disjuntor de um circuito: corrente de projeto, disjuntor, capacidade de condução, queda de tensão e seção mínima, com exemplo de chuveiro.">
+<link rel="canonical" href="https://pedrogeib.github.io/simulador-simples-2027/blog/dimensionar-cabo-e-disjuntor-nbr-5410.html"><meta property="og:title" content="Como dimensionar cabo e disjuntor pela NBR 5410: passo a passo com exemplo"><meta property="og:description" content="Passo a passo para dimensionar cabo e disjuntor de um circuito: corrente de projeto, disjuntor, capacidade de condução, queda de tensão e seção mínima, com exemplo de chuveiro."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Como dimensionar cabo e disjuntor pela NBR 5410: passo a passo com exemplo", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "pt-BR", "mainEntityOfPage": "https://pedrogeib.github.io/simulador-simples-2027/blog/dimensionar-cabo-e-disjuntor-nbr-5410.html"}</script><style>:root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}header{background:var(--escuro);color:#fff;padding:28px 0}
+header a{color:#d6e2f2;text-decoration:none;font-size:14px;margin-right:14px}h1{font-size:32px;line-height:1.15;margin:16px 0 8px;letter-spacing:-.5px}
+.meta{color:#9fb0c8;font-size:14px}article{padding:28px 0}h2{font-size:24px;color:var(--azul);margin:26px 0 10px}
+p,li{font-size:17px;margin-bottom:12px}ul{padding-left:24px}a{color:var(--azul)}
+table{width:100%;border-collapse:collapse;margin:14px 0}td,th{padding:9px;border-bottom:1px solid #dfe5ee;text-align:left;font-size:16px}th{color:var(--cinza);font-size:14px}
+.cta{background:var(--azul);color:#fff;border-radius:16px;padding:24px;margin:30px 0}.cta h3{font-size:20px;margin-bottom:6px}
+.cta p{color:#d6e2f2;font-size:16px}.cta a{display:inline-block;margin:6px 10px 0 0;background:var(--ouro);color:var(--escuro);font-weight:800;text-decoration:none;padding:12px 18px;border-radius:10px;font-size:15px}
+.aviso{font-size:13px;color:var(--cinza);border-top:1px solid #dfe5ee;padding-top:14px;margin-top:20px}
+footer{background:var(--escuro);color:#9fb0c8;padding:22px 0;font-size:14px;text-align:center}
+@media(max-width:600px){h1{font-size:25px}}</style></head><body>
+<header><div class="wrap"><a href="../">Início</a><a href="./">Blog</a><a href="../fator-r/">Calc. Fator R</a><a href="../queda-de-tensao/">Calc. queda de tensão</a>
+<h1>Como dimensionar cabo e disjuntor pela NBR 5410: passo a passo com exemplo</h1><div class="meta">Publicado em 20/10/2026</div></div></header>
+<main class="wrap"><article>
+<p>Dimensionar um circuito elétrico é escolher o disjuntor e o cabo de forma que o cabo suporte a corrente, a queda de tensão fique dentro do limite e a seção respeite o mínimo da norma. Este passo a passo segue a lógica da ABNT NBR 5410 para cabos de cobre com isolação PVC 70 °C.</p>
+<h2>1. Calcule a corrente de projeto (Ib)</h2>
+<p>Monofásico: Ib = potência ÷ (tensão × fator de potência). Trifásico: Ib = potência ÷ (√3 × tensão × fator de potência).</p>
+<h2>2. Escolha o disjuntor (In)</h2>
+<p>Use o primeiro valor padrão igual ou maior que Ib: 10, 16, 20, 25, 32, 40, 50, 63 A, e assim por diante. A regra de proteção é Ib ≤ In ≤ Iz, em que Iz é a capacidade do cabo.</p>
+<h2>3. Escolha o cabo pela capacidade de condução</h2>
+<p>Procure a menor seção cuja capacidade de condução, corrigida pela temperatura ambiente e pelo agrupamento de circuitos, seja maior ou igual a In. A capacidade vem da Tabela 36 da NBR 5410 e depende do método de instalação (B1, B2, C etc.) e do número de condutores carregados.</p>
+<h2>4. Confira a queda de tensão</h2>
+<p>Queda (%) = k × ρ × comprimento × Ib ÷ (seção × tensão) × 100, com k = 2 no monofásico e √3 no trifásico. Nos circuitos terminais o limite é de 4%. Veja mais em <a href="queda-de-tensao-nbr-5410.html">Queda de tensão pela NBR 5410</a>.</p>
+<h2>5. Respeite a seção mínima</h2>
+<p>Iluminação: 1,5 mm². Tomadas e circuitos de uso específico: 2,5 mm². A seção final é a maior entre capacidade, queda de tensão e mínima.</p>
+<h2>Exemplo: chuveiro de 5500 W em 220 V</h2>
+<p>Circuito monofásico, 15 metros, eletroduto embutido em alvenaria (método B1), 30 °C e um circuito no eletroduto.</p>
+<ul><li>Ib = 5500 ÷ 220 = <b>25 A</b>.</li><li>Disjuntor: <b>25 A</b>.</li><li>Capacidade: o cabo de 2,5 mm² suporta 24 A e não atende; o de 4 mm² suporta 32 A e atende.</li><li>Queda de tensão com 4 mm²: cerca de <b>1,92%</b>, dentro dos 4%.</li><li>Resultado: <b>cabo de 4 mm² e disjuntor de 25 A</b>.</li></ul>
+<h2>Faça a conta automaticamente</h2>
+<p>A <a href="../queda-de-tensao/">calculadora gratuita</a> faz esse cálculo para um circuito, e a planilha faz para até 20 circuitos de uma vez.</p>
+
+<div class="cta"><h3>Calcule o seu circuito agora</h3><p>Use a calculadora gratuita de queda de tensão e bitola de cabo ou a planilha com até 20 circuitos e quadro de cargas.</p><a href="../queda-de-tensao/" rel="noopener">Calculadora de queda de tensão (grátis)</a><a href="https://pay.kiwify.com.br/oGdkxUz" rel="noopener">Planilha Eletricista PRO – R$ 67</a></div>
+<p class="aviso">Conteúdo informativo sobre a ABNT NBR 5410. Os valores de tabelas citados vêm de fontes secundárias; confirme na norma vigente. Todo projeto elétrico deve ser validado por profissional habilitado e não dispensa ART.</p></article></main>
+<footer><div class="wrap">Simulador Simples Nacional 2027 e Planilha Eletricista PRO · <a href="./" style="color:#d6e2f2">Blog</a></div></footer></body></html>
