@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Planilha Eletricista PRO – Cabos, Disjuntores e Quadro de Cargas</title>
-<meta name="description" content="Planilha que dimensiona cabo, disjuntor e queda de tensão pela NBR 5410 e monta o quadro de cargas. Até 20 circuitos.">
+<meta name="description" content="Planilha que dimensiona cabo, disjuntor, cabo terra, queda de tensão e DR pela NBR 5410, monta o quadro de cargas e a lista de materiais. Até 30 circuitos.">
 <style>
   :root{--azul:#1F3A5F;--escuro:#0F1F35;--ouro:#F2C200;--verde:#1E8A4A;--texto:#1d2633;--cinza:#55657A;--fundo:#f5f7fb}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -43,19 +43,21 @@
 
 <header><div class="wrap"><span class="tag">PARA ELETRICISTAS • NBR 5410</span>
 <h1>Cabo e disjuntor certos <span>em segundos</span></h1>
-<p class="lead">Informe potência, tensão e distância. A planilha calcula a corrente, escolhe o disjuntor, dimensiona o cabo por capacidade e queda de tensão e avisa quando algo está fora do limite.</p>
+<p class="lead">Escolha o aparelho, o local, a tensão e a distância. A planilha calcula a corrente, escolhe o disjuntor, dimensiona o cabo por capacidade e queda de tensão, o cabo terra e indica quando o DR é obrigatório.</p>
 <img class="capa" src="capa.png" alt="Planilha Eletricista PRO"></div></header>
 <section><div class="wrap"><h2>O que a planilha faz</h2><div class="grid">
 <div class="card"><b>Disjuntor e cabo</b><small>Escolhe o disjuntor (Ib ≤ In ≤ Iz) e o menor cabo que atende capacidade, queda e seção mínima.</small></div>
 <div class="card"><b>Queda de tensão</b><small>Mostra a queda real em % e avisa se passa do limite (4% nos circuitos terminais).</small></div>
 <div class="card"><b>Fatores de correção</b><small>Considera temperatura ambiente e agrupamento de circuitos, nos métodos B1, B2 e C.</small></div>
-<div class="card"><b>Quadro de cargas</b><small>Soma por tipo, corrente de demanda e disjuntor geral sugerido.</small></div></div>
-<ul class="checks"><li>Até 20 circuitos, monofásicos ou trifásicos</li><li>Funciona no Excel e no Google Planilhas, sem macros</li><li>Cobre, isolação PVC 70 °C, tabelas da NBR 5410 dentro da planilha</li><li>Exemplos prontos para apagar e usar</li></ul></div></section>
-<section style="padding-top:0"><div class="wrap"><div class="oferta"><div class="preco">R$ 67</div><div class="preco-old">pagamento único · sem mensalidade</div>
-<a class="btn" href="https://pay.kiwify.com.br/oGdkxUz" rel="noopener">Quero a planilha</a><p class="aviso" style="margin-top:18px">Outras formas de compra: <a href="https://pay.hotmart.com/B108120095O" rel="noopener" style="color:var(--azul)">Hotmart</a> · <a href="https://chk.eduzz.com/40QR7YXJ9B" rel="noopener" style="color:var(--azul)">Eduzz</a></p><p class="aviso">Pagamento único. Garantia de 7 dias.</p></div></div></section>
+<div class="card"><b>Quadro de cargas</b><small>Soma por tipo, fator de demanda, corrente de demanda e disjuntor geral sugerido.</small></div>
+<div class="card"><b>DR e cabo terra</b><small>Marca onde o DR de 30 mA é obrigatório pelo local (banheiro, cozinha, área de serviço...) e calcula o cabo terra.</small></div>
+<div class="card"><b>Lista de materiais</b><small>Metros de cabo por bitola, disjuntores por polos e DR: pronta para o orçamento.</small></div></div>
+<ul class="checks"><li>Até 30 circuitos, monofásicos, bifásicos ou trifásicos</li><li>Lista de aparelhos com potência típica: chuveiro, ar-condicionado, forno, cooktop, bomba e mais</li><li>Funciona no Excel e no Google Planilhas, sem macros</li><li>Cobre, isolação PVC 70 °C, tabelas da NBR 5410 dentro da planilha</li><li>Exemplos prontos para apagar e usar</li></ul></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="oferta"><div class="preco-old" style="font-size:20px;margin:0 0 6px">de <s>R$ 67</s> por</div><div class="preco">R$ 37</div><div class="preco-old">oferta de lançamento · pagamento único · sem mensalidade</div>
+<a class="btn" href="https://pay.kiwify.com.br/7QNpD1v" rel="noopener">Quero a planilha por R$ 37</a><p class="aviso" style="margin-top:18px">Outras formas de compra (preço cheio): <a href="https://pay.hotmart.com/B108120095O" rel="noopener" style="color:var(--azul)">Hotmart</a> · <a href="https://chk.eduzz.com/40QR7YXJ9B" rel="noopener" style="color:var(--azul)">Eduzz</a></p><p class="aviso">Pagamento único. Garantia de 7 dias.</p></div></div></section>
 <section style="padding-top:0" class="faq"><div class="wrap"><h2>Perguntas frequentes</h2>
 <details><summary>Substitui o projeto elétrico?</summary><p>Não. É uma ferramenta de apoio. Todo projeto deve ser validado por profissional habilitado e seguir a NBR 5410 vigente.</p></details>
 <details><summary>A queda de tensão considera a reatância?</summary><p>Não. O cálculo é simplificado (resistência do cobre). Em cabos grandes ou circuitos longos, confirme com o método completo.</p></details>
 <details><summary>De onde vêm as tabelas?</summary><p>Capacidade de condução da Tabela 36 da NBR 5410 (reprodução de guia de fabricante) e fatores usuais das tabelas 40 e 42. Confira na norma antes de usar em projeto.</p></details>
-<details><summary>Preciso saber Excel?</summary><p>Não. Você preenche células amarelas e o resultado aparece sozinho.</p></details></div></section>
+<details><summary>Preciso saber Excel?</summary><p>Não. Você escolhe o aparelho e o local nas listas, preenche tensão e distância nas células amarelas e o resultado aparece sozinho. Vem com manual em PDF.</p></details></div></section>
 <footer><div class="wrap">Planilha Eletricista PRO · Ferramenta de apoio. Não substitui projeto nem ART.</div></footer></body></html>
