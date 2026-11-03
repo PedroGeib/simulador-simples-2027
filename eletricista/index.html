@@ -36,6 +36,22 @@
   .faq summary{font-weight:700;cursor:pointer;color:var(--azul)}
   .faq details p{margin:10px 0 0;color:var(--cinza);font-size:16px}
   footer{background:var(--escuro);color:#9fb0c8;padding:28px 0;font-size:14px;text-align:center}
+  .demo{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center}
+  .demo video{width:300px;max-width:100%;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.25);background:#000}
+  .demo .txt{flex:1;min-width:260px}
+  .tbl-wrap{overflow-x:auto;margin-top:16px;border-radius:12px;border:1px solid #cfd8e3}
+  table.pl{border-collapse:collapse;width:100%;font-size:15px;background:#fff;min-width:560px}
+  table.pl caption{background:#107C41;color:#fff;font-weight:700;text-align:left;padding:8px 12px}
+  table.pl th{background:var(--azul);color:#fff;padding:8px;font-size:14px}
+  table.pl td{border:1px solid #d5dbe3;padding:7px 8px;text-align:center}
+  table.pl td.in{background:#FFF2A8;color:#0000c8}
+  table.pl td.out{background:#E3F0E3;font-weight:700}
+  table.pl td.dr{background:#FCE4D6;color:#C55A11;font-weight:700}
+  .garantia{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #e3e8f1;border-radius:14px;padding:18px 22px;margin-top:18px;text-align:left}
+  .garantia .selo{flex:none;width:64px;height:64px;border-radius:50%;background:var(--ouro);color:var(--escuro);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:20px}
+  ul.leva{list-style:none;text-align:left;max-width:440px;margin:18px auto 0}
+  ul.leva li{padding:6px 0 6px 28px;position:relative;font-size:16px}
+  ul.leva li::before{content:"✔";position:absolute;left:0;color:var(--verde);font-weight:900}
   @media (max-width:640px){h1{font-size:30px}.grid{grid-template-columns:1fr}.preco{font-size:46px}section{padding:36px 0}}
 </style>
 </head>
@@ -45,6 +61,29 @@
 <h1>Cabo e disjuntor certos <span>em segundos</span></h1>
 <p class="lead">Escolha o aparelho, o local, a tensão e a distância. A planilha calcula a corrente, escolhe o disjuntor, dimensiona o cabo por capacidade e queda de tensão, o cabo terra e indica quando o DR é obrigatório.</p>
 <img class="capa" src="capa.png" alt="Planilha Eletricista PRO"></div></header>
+<section><div class="wrap"><div class="demo">
+<video src="demo.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="Demonstração da planilha"></video>
+<div class="txt"><h2>Veja funcionando</h2>
+<p>Orçamento elétrico de uma casa com 7 circuitos: você escolhe o aparelho, o local e a distância. A planilha devolve disjuntor, cabo e DR de cada circuito e monta a lista do que comprar.</p>
+<p style="font-size:15px;color:var(--cinza)">Demonstração com os exemplos que já vêm preenchidos na planilha.</p>
+<a class="btn" href="https://pay.kiwify.com.br/7QNpD1v" rel="noopener">Quero a planilha por R$ 37</a></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><h2>Exemplo real: casa com 7 circuitos</h2>
+<p>Estes são os resultados que a planilha calcula para os exemplos que vêm nela. Amarelo é o que você preenche; o resto é automático.</p>
+<div class="tbl-wrap"><table class="pl"><caption>Aba Circuitos</caption>
+<tr><th>Aparelho</th><th>Local</th><th>Tensão</th><th>Distância</th><th>Disjuntor</th><th>Cabo</th><th>Terra</th><th>Queda</th><th>DR 30 mA</th></tr>
+<tr><td class="in">Chuveiro 7500 W</td><td class="in">Banheiro</td><td class="in">220 V</td><td class="in">12 m</td><td class="out">40 A</td><td class="out">6 mm²</td><td class="out">6 mm²</td><td class="out">1,39%</td><td class="dr">Obrigatório</td></tr>
+<tr><td class="in">Ar-condicionado 12.000 BTU</td><td class="in">Quarto</td><td class="in">220 V</td><td class="in">15 m</td><td class="out">10 A</td><td class="out">2,5 mm²</td><td class="out">2,5 mm²</td><td class="out">0,74%</td><td class="out">—</td></tr>
+<tr><td class="in">Forno elétrico</td><td class="in">Cozinha</td><td class="in">220 V</td><td class="in">8 m</td><td class="out">16 A</td><td class="out">2,5 mm²</td><td class="out">2,5 mm²</td><td class="out">0,89%</td><td class="dr">Obrigatório</td></tr>
+<tr><td class="in">Tomadas de cozinha</td><td class="in">Cozinha</td><td class="in">127 V</td><td class="in">10 m</td><td class="out">16 A</td><td class="out">2,5 mm²</td><td class="out">2,5 mm²</td><td class="out">2,12%</td><td class="dr">Obrigatório</td></tr>
+<tr><td class="in">Tomadas de uso geral</td><td class="in">Sala</td><td class="in">127 V</td><td class="in">18 m</td><td class="out">16 A</td><td class="out">2,5 mm²</td><td class="out">2,5 mm²</td><td class="out">3,01%</td><td class="out">—</td></tr>
+<tr><td class="in">Iluminação</td><td class="in">Sala</td><td class="in">127 V</td><td class="in">15 m</td><td class="out">10 A</td><td class="out">1,5 mm²</td><td class="out">1,5 mm²</td><td class="out">1,67%</td><td class="out">—</td></tr>
+<tr><td class="in">Bomba d'água 1 CV</td><td class="in">Área externa</td><td class="in">220 V</td><td class="in">40 m</td><td class="out">10 A</td><td class="out">2,5 mm²</td><td class="out">2,5 mm²</td><td class="out">2,05%</td><td class="dr">Obrigatório</td></tr>
+</table></div>
+<div class="tbl-wrap" style="max-width:460px"><table class="pl" style="min-width:0"><caption>Aba Lista de Materiais</caption>
+<tr><th>Material</th><th>Quantidade (com 10% de folga)</th></tr>
+<tr><td>Cabo 1,5 mm²</td><td class="out">50 m</td></tr><tr><td>Cabo 2,5 mm²</td><td class="out">300 m</td></tr><tr><td>Cabo 6 mm²</td><td class="out">39 m</td></tr>
+<tr><td>Disjuntores (1 e 2 polos)</td><td class="out">7</td></tr><tr><td>DR 30 mA</td><td class="out">4</td></tr></table></div>
+</div></section>
 <section><div class="wrap"><h2>O que a planilha faz</h2><div class="grid">
 <div class="card"><b>Disjuntor e cabo</b><small>Escolhe o disjuntor (Ib ≤ In ≤ Iz) e o menor cabo que atende capacidade, queda e seção mínima.</small></div>
 <div class="card"><b>Queda de tensão</b><small>Mostra a queda real em % e avisa se passa do limite (4% nos circuitos terminais).</small></div>
@@ -54,7 +93,10 @@
 <div class="card"><b>Lista de materiais</b><small>Metros de cabo por bitola, disjuntores por polos e DR: pronta para o orçamento.</small></div></div>
 <ul class="checks"><li>Até 30 circuitos, monofásicos, bifásicos ou trifásicos</li><li>Lista de aparelhos com potência típica: chuveiro, ar-condicionado, forno, cooktop, bomba e mais</li><li>Funciona no Excel e no Google Planilhas, sem macros</li><li>Cobre, isolação PVC 70 °C, tabelas da NBR 5410 dentro da planilha</li><li>Exemplos prontos para apagar e usar</li></ul></div></section>
 <section style="padding-top:0"><div class="wrap"><div class="oferta"><div class="preco-old" style="font-size:20px;margin:0 0 6px">de <s>R$ 67</s> por</div><div class="preco">R$ 37</div><div class="preco-old">oferta de lançamento · pagamento único · sem mensalidade</div>
-<a class="btn" href="https://pay.kiwify.com.br/7QNpD1v" rel="noopener">Quero a planilha por R$ 37</a><p class="aviso" style="margin-top:18px">Outras formas de compra (preço cheio): <a href="https://pay.hotmart.com/B108120095O" rel="noopener" style="color:var(--azul)">Hotmart</a> · <a href="https://chk.eduzz.com/40QR7YXJ9B" rel="noopener" style="color:var(--azul)">Eduzz</a></p><p class="aviso">Pagamento único. Garantia de 7 dias.</p></div></div></section>
+<ul class="leva"><li>Planilha com até 30 circuitos (Excel e Google Planilhas)</li><li>Disjuntor, cabo, cabo terra, queda de tensão e DR de cada circuito</li><li>Quadro de cargas com disjuntor geral sugerido</li><li>Lista de materiais pronta para o orçamento</li><li>Manual de instruções em PDF</li></ul>
+<p style="margin-top:14px;color:var(--cinza);font-size:16px">Custa menos que um DR de 30 mA.</p>
+<a class="btn" href="https://pay.kiwify.com.br/7QNpD1v" rel="noopener">Quero a planilha por R$ 37</a>
+<div class="garantia"><div class="selo">7 dias</div><div><b>Garantia de 7 dias.</b> Comprou, testou e não gostou? Peça o reembolso dentro de 7 dias pela própria Kiwify e receba o valor de volta.</div></div><p class="aviso" style="margin-top:18px">Outras formas de compra (preço cheio): <a href="https://pay.hotmart.com/B108120095O" rel="noopener" style="color:var(--azul)">Hotmart</a> · <a href="https://chk.eduzz.com/40QR7YXJ9B" rel="noopener" style="color:var(--azul)">Eduzz</a></p><p class="aviso">Pagamento único. Garantia de 7 dias.</p></div></div></section>
 <section style="padding-top:0" class="faq"><div class="wrap"><h2>Perguntas frequentes</h2>
 <details><summary>Substitui o projeto elétrico?</summary><p>Não. É uma ferramenta de apoio. Todo projeto deve ser validado por profissional habilitado e seguir a NBR 5410 vigente.</p></details>
 <details><summary>A queda de tensão considera a reatância?</summary><p>Não. O cálculo é simplificado (resistência do cobre). Em cabos grandes ou circuitos longos, confirme com o método completo.</p></details>
